@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component MovieDetail.vue Matches the snapshot 1`] = `
+<v-container moviedetail="" ratings="">
+  <v-layout wrap="">
+    <v-flex xs12="" mr-1="" ml-1="">
+      <v-card>
+        <v-img contain="" aspect-ratio="2"></v-img>
+        <v-card-text primary-title="">
+          <div>
+            <h1 class="headline mb-0">-</h1>
+            <p> </p>
+            <h3>Actors: </h3>
+            <h3>Awards: </h3>
+            <h3>Genre: </h3>
+          </div>
+        </v-card-text>
+        <v-card-actions>
+          <v-btn flat="" color="green">back</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
+  <v-layout wrap="">
+    <v-flex xs12="">
+      <div class="justify-center">
+        <v-dialog width="500">
+          <v-btn slot="activator" color="black" dark="">
+            View Ratings
+          </v-btn>
+          <v-card>
+            <v-card-title primary-title="" class="headline grey lighten-2">
+              Ratings
+            </v-card-title>
+            <v-card-text>
+              <table style="width: 100%;">
+                <tr>
+                  <th>Source</th>
+                  <th>Ratings</th>
+                </tr>
+              </table>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-spacer></v-spacer>
+              <v-btn color="primary" flat="">
+
+                OK
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-dialog>
+      </div>
+    </v-flex>
+  </v-layout>
+</v-container>
+`;

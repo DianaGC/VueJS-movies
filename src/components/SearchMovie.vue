@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-xl>
+  <v-container v-if="data" grid-list-xl>
     <v-flex xs12 sm12 md12>
       <v-card><h2 class="text-sm-center">Movies</h2></v-card>
     </v-flex>
@@ -24,23 +24,45 @@
       </v-flex>
     </v-layout>
   </v-container>
+  <v-container v-else >
+    <div class="text-xs-center">
+      <h2>No Movie in API with {{this.name}}</h2>
+      <v-card-actions>
+        <v-btn flat color="green" v-on:click="getBack">back</v-btn>
+      </v-card-actions>
+    </div>
+  </v-container>
 </template>
 
 <script>
-  import { mapState } from "vuex";
-  export default {
-    name: 'Home',
-    mounted () {
-      this.$store.dispatch('getMovies')
+import {getMovies} from '@/service/movies'
+
+export default {
+  name: 'SearchMovie',
+  props: ['name'],
+  data () {
+    return {
+      movies: [],
+      data: false
+    }
+  },
+  mounted () {
+      getMovies(this.name)
+        .then(response => {
+          this.movies = response.Search;
+          this.data = (response.Response === 'True')
+        })
+        .catch(e => console.log(e))
+  },
+  methods: {
+    movieDetail (id) {
+      this.$router.push('/movie/' + id)
     },
 
-    methods: {
-      movieDetail (id) {
-        this.$router.push('/movie/' + id)
-      },
-    },
-    computed: {
-      ...mapState(["movies"])
+    getBack () {
+      this.$router.push('/')
     }
+
   }
+}
 </script>

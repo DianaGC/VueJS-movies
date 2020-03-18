@@ -1,6 +1,8 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import Home from '../components/Home'
+import Movie from '../components/MovieDetail'
+import SearchMovie from '../components/SearchMovie'
 
 Vue.use(VueRouter);
 
@@ -22,8 +24,6 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
-  base: process.env.BASE_URL,
   routes
 });
 

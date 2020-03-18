@@ -1,4 +1,4 @@
-# untitled5
+# movies
 
 ## Project setup
 ```
@@ -20,10 +20,3 @@ npm run build
 npm run test:unit
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
