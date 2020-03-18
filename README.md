@@ -1,21 +1,19 @@
 # movies
 
-## Project setup
+### How to prepare your environment
+
+First install the dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+#### Compiles 
 ```
 npm run serve
+
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
+#### tests
 ```
 npm run test:unit
 ```
